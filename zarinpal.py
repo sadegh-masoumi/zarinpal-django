@@ -39,7 +39,7 @@ class ZarinPal:
     def verify(self, request, amount):
         t_status = request.GET.get('Status')
         t_authority = request.GET['Authority']
-        if request.GET.get('Status') == 'OK':
+        if t_status == 'OK':
             req_header = {"accept": "application/json",
                           "content-type": "application/json'"}
             req_data = {
